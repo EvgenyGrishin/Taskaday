@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.egrishin.task_a_day.MainActivity">
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@string/main_task_title"
+            android:gravity="center_horizontal"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"
+            android:layout_gravity="bottom"
+            />
+
+        <EditText
+            android:id="@+id/main_task_line_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="What is 1 main thing to be done today?"
+            android:inputType="textMultiLine"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@string/secondary_task_title"
+            android:gravity="center_horizontal"
+        />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"
+            android:layout_gravity="bottom"
+            />
+
+        <View
+            android:id="@+id/plusEditText"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:inputType="textMultiLine"
+            />
+
+        <android.support.v7.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="plusTextField"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@string/other_task_title"
+            android:gravity="center_horizontal"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"
+            android:layout_gravity="bottom"
+            />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
