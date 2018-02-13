@@ -45,6 +45,7 @@
             android:layout_width="match_parent"
             android:text="@string/secondary_task_title"
             android:gravity="center_horizontal"
+            android:onClick="summonButton"
         />
 
         <LinearLayout
@@ -58,18 +59,20 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/secondaryButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="horizontal"
             >
 
-            <android.support.v7.widget.AppCompatButton
+            <!--<android.support.v7.widget.AppCompatButton
                 android:id="@+id/secondary_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="3"
                 android:layout_gravity="right"
                 android:onClick="plusTextField"
-                />
+                />-->
 
         </LinearLayout>
 

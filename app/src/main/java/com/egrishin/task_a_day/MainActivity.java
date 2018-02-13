@@ -14,38 +14,54 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    int numberOfLinesLeft = 3;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    }
+        }
 
-    int numberOfLines = 3;
+    public void summonButton(View view){
 
-    public void plusTextField(View view) {
+            LinearLayout ll2 = (LinearLayout) findViewById(R.id.secondaryButton);
+            Button secbutt = new Button(this);
 
-        if (numberOfLines > 0) {
+            secbutt.setText("" + numberOfLinesLeft);
+            ll2.addView(secbutt);
+            int i = secbutt.getId();
+
+            secbutt.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                    public void onClick(View view){
+
+                    plusTextField();
+
+                    return;
+                }
+            });
+
+            if (numberOfLinesLeft > 0) summonButton(View);
+
+            else return;
+
+            }
+
+
+    public void plusTextField() {
+
             LinearLayout ll = (LinearLayout) findViewById(R.id.linearLayout1);
 
             // add edittext
             EditText et = new EditText(this);
             LinearLayout.LayoutParams p = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
             et.setLayoutParams(p);
-            et.setText("text" + numberOfLines);
-            et.setId(numberOfLines - 1);
+            et.setText("text" + numberOfLinesLeft);
+            et.setId(numberOfLinesLeft - 1);
             ll.addView(et);
-            numberOfLines--;
-
-            //button counter
-
-            Button secButton = (Button)findViewById(R.id.secondary_button);
-            secButton.setText("" + numberOfLines);
-
-        }
-
-        else {
-            Toast.makeText(this, "Not more than 3 secondary activities a day", Toast.LENGTH_LONG).show();
-        }
+            numberOfLinesLeft--;
+            return;
 
     }
 
