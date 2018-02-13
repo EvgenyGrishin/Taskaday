@@ -10,20 +10,14 @@
     <LinearLayout
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_weight="1">
 
-        <TextView android:layout_height="wrap_content"
+        <TextView
+            android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:text="@string/main_task_title"
             android:gravity="center_horizontal"
-            />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@android:color/black"
-            android:layout_gravity="bottom"
             />
 
         <EditText
@@ -32,41 +26,55 @@
             android:layout_height="wrap_content"
             android:hint="What is 1 main thing to be done today?"
             android:inputType="textMultiLine"
+            android:layout_margin="16dp"
             />
 
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/ll1"
+        android:id="@+id/linearLayout0"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:layout_weight="1"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        >
 
-        <TextView android:layout_height="wrap_content"
+        <TextView
+            android:id="@+id/textline2"
+            android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:text="@string/secondary_task_title"
             android:gravity="center_horizontal"
+            android:onClick="summonButton"
         />
 
-        <View
+        <LinearLayout
+            android:id="@+id/linearLayout1"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@android:color/black"
-            android:layout_gravity="bottom"
-            />
-
-        <View
-            android:id="@+id/plusEditText"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:inputType="textMultiLine"
-            />
-
-        <android.support.v7.widget.AppCompatButton
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="plusTextField"/>
+            android:orientation="vertical"
+            android:layout_margin="16dp"
+            >
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/secondaryButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <!--<android.support.v7.widget.AppCompatButton
+                android:id="@+id/secondary_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:layout_gravity="right"
+                android:onClick="plusTextField"
+                />-->
+
+        </LinearLayout>
 
 
     </LinearLayout>
@@ -74,20 +82,13 @@
     <LinearLayout
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_weight="1">
 
         <TextView android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:text="@string/other_task_title"
             android:gravity="center_horizontal"/>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@android:color/black"
-            android:layout_gravity="bottom"
-            />
 
 
     </LinearLayout>
